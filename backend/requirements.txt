@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+transformers
+torch
+accelerate
+intel-extension-for-pytorch
+sentencepiece
+protobuf
+python-multipart
