@@ -3,18 +3,23 @@ import './App.css';
 
 const LANGUAGES = [
   { label: 'Auto Detect', code: 'auto' },
-  { label: 'English', code: 'eng_Latn' },
-  { label: 'French', code: 'fra_Latn' },
-  { label: 'Spanish', code: 'spa_Latn' },
-  { label: 'German', code: 'deu_Latn' },
-  { label: 'Chinese (Simplified)', code: 'zho_Hans' },
-  { label: 'Japanese', code: 'jpn_Jpan' },
-  { label: 'Hindi', code: 'hin_Deva' },
-  { label: 'Arabic', code: 'arb_Arab' },
-  { label: 'Russian', code: 'rus_Cyrl' },
-  { label: 'Portuguese', code: 'por_Latn' },
-  { label: 'Italian', code: 'ita_Latn' },
-  { label: 'Korean', code: 'kor_Kore' },
+  { label: 'English', code: 'English' },
+  { label: 'Chinese (Simplified)', code: 'Chinese' },
+  { label: 'French', code: 'French' },
+  { label: 'Spanish', code: 'Spanish' },
+  { label: 'German', code: 'German' },
+  { label: 'Japanese', code: 'Japanese' },
+  { label: 'Korean', code: 'Korean' },
+  { label: 'Russian', code: 'Russian' },
+  { label: 'Portuguese', code: 'Portuguese' },
+  { label: 'Italian', code: 'Italian' },
+  { label: 'Turkish', code: 'Turkish' },
+  { label: 'Arabic', code: 'Arabic' },
+  { label: 'Thai', code: 'Thai' },
+  { label: 'Vietnamese', code: 'Vietnamese' },
+  { label: 'Hindi', code: 'Hindi' },
+  { label: 'Indonesian', code: 'Indonesian' },
+  { label: 'Cantonese', code: 'Cantonese' },
 ];
 
 const API_URL = 'http://localhost:8000';
@@ -32,7 +37,7 @@ function App() {
   const [sourceText, setSourceText] = useState('');
   const [targetText, setTargetText] = useState('');
   const [sourceLang, setSourceLang] = useState('auto');
-  const [targetLang, setTargetLang] = useState('fra_Latn');
+  const [targetLang, setTargetLang] = useState('French');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [backendStatus, setBackendStatus] = useState<'online' | 'offline'>('online');
@@ -124,7 +129,7 @@ function App() {
   return (
     <div className="app-wrapper">
       <div className="header">
-        <h1>NLP Translator</h1>
+        <h1>NLP Translator (Pro)</h1>
         <div style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
           <div className="status-badge">
             <div className={`dot ${backendStatus}`}></div>

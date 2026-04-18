@@ -1,9 +1,7 @@
 fastapi
 uvicorn
-transformers
-torch
-accelerate
-sentencepiece
-protobuf
-python-multipart
+pydantic
+llama-cpp-python
+huggingface-hub
 langdetect
+torch
