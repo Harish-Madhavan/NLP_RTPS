@@ -1,12 +1,16 @@
-# NLP Machine Translation Application
+# NLP Machine Translation Application (Pro)
 
-A full-stack machine translation application using FastAPI (Python) and React (TypeScript).
+A full-stack, high-accuracy machine translation application using FastAPI (Python) and React (TypeScript).
 
 ## Features
-- **Universal Translation:** Powered by the `facebook/nllb-200-distilled-600M` model, supporting 200+ languages.
+- **High-Accuracy Translation:** Powered by the `tencent/HY-MT1.5-1.8B-GGUF` model, optimized for superior translation quality across 33+ major world languages.
+- **GGUF Optimization:** Uses 4-bit quantization for extremely fast inference with low RAM overhead.
 - **Modern UI:** Sleek, responsive design built with React and Vanilla CSS.
 - **Local Execution:** Runs entirely on your machine for privacy and zero API costs.
-- **Cross-Platform:** Works on Windows, macOS, and Linux.
+- **Hardware Acceleration:** Supports GPU/XPU offloading via `llama-cpp-python`.
+
+## Supported Languages
+English, Chinese (Simplified/Traditional), French, Spanish, German, Japanese, Korean, Russian, Portuguese, Italian, Turkish, Arabic, Thai, Vietnamese, Malay, Indonesian, Filipino, Hindi, Polish, Czech, Dutch, Khmer, Burmese, Persian, Gujarati, Urdu, Telugu, Marathi, Hebrew, Bengali, Tamil, Ukrainian, Tibetan, Kazakh, Mongolian, Uyghur, and Cantonese.
 
 ## Prerequisites
 - Python 3.8+
@@ -35,7 +39,7 @@ A full-stack machine translation application using FastAPI (Python) and React (T
    ```bash
    python main.py
    ```
-   *Note: The first time you run this, it will download the NLLB-200 model (~2.4GB). This might take a few minutes.*
+   *Note: The first time you run this, it will automatically download the HY-MT1.5 model (~1.1GB). This might take a few minutes depending on your connection.*
 
 ### 2. Frontend Setup (React)
 1. Open another terminal and navigate to the `frontend` directory:
@@ -53,13 +57,13 @@ A full-stack machine translation application using FastAPI (Python) and React (T
 4. Open your browser and navigate to the URL shown (usually `http://localhost:5173`).
 
 ## Usage
-1. Ensure the backend is running.
+1. Ensure the backend is running and the status indicator in the UI is green.
 2. Select your source and target languages.
 3. Type the text you want to translate in the left box.
 4. Click "Translate".
 5. Use the "Swap" button to quickly reverse languages or "Copy" to save the result.
 
 ## Tech Stack
-- **Backend:** FastAPI, Hugging Face Transformers, PyTorch
+- **Backend:** FastAPI, llama-cpp-python, Hugging Face Hub, LangDetect
 - **Frontend:** React, TypeScript, Vite, Vanilla CSS
-- **Model:** NLLB-200 (No Language Left Behind)
+- **Model:** HY-MT1.5-1.8B-GGUF (Q4_K_M)
